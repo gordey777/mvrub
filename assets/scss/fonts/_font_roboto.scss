@@ -1,0 +1,73 @@
+$rb-font-path: '../fonts' !default;
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-style: normal;
+
+  src: url('#{$rb-font-path}/roboto-light.eot');
+  src: local('Roboto Light'),
+  local('roboto-light'),
+  url('#{$rb-font-path}/roboto-light.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/roboto-light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-style: normal;
+
+  src: url('#{$rb-font-path}/roboto-regular.eot');
+  src: local('Roboto Regular'),
+  local('roboto-regular'),
+  url('#{$rb-font-path}/roboto-regular.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/roboto-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-style: normal;
+
+  src: url('#{$rb-font-path}/roboto-bold.eot');
+  src: local('Roboto Regular'),
+  local('roboto-bold'),
+  url('#{$rb-font-path}/roboto-bold.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/roboto-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-style: italic;
+
+  src: url('#{$rb-font-path}/roboto-lightitalic.eot');
+  src: local('Roboto Light Italic'),
+  local('roboto-lightitalic'),
+  url('#{$rb-font-path}/roboto-lightitalic.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/roboto-lightitalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-style: italic;
+
+  src: url('#{$rb-font-path}/roboto-italic.eot');
+  src: local('Roboto Italic'),
+  local('roboto-italic'),
+  url('#{$rb-font-path}/roboto-italic.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/roboto-italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-style: italic;
+
+  src: url('#{$rb-font-path}/roboto-bolditalic.eot');
+  src: local('Roboto Bold Italic'),
+  local('roboto-bolditalic'),
+  url('#{$rb-font-path}/roboto-bolditalic.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/roboto-bolditalic.woff') format('woff');
+}
