@@ -381,21 +381,205 @@ header {
     }
   }
 }
+
 .block3 {
   h2 {
+    font-size: 47px;
+    font-weight: bold;
+
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 65px;
+    padding: 70px 0 0 0;
     span {
-      text-shadow: 200px 0 1px #f00;
+      position: relative;
+      z-index: 1;
+    }
+    &:after {
+      position: absolute;
+      top: 96px;
+      left: -622px;
+
+      display: block;
+
+      width: 600px;
+      height: 2px;
+
+      content: '';
+
+      background: $tx-pink;
+    }
+    &:before {
+      font-size: 95px;
+      font-weight: bold;
+
+      position: absolute;
+      z-index: 0;
+      top: 43px;
+      left: 3px;
+
+      content: 'Напрвления';
+      letter-spacing: 8px;
+      text-transform: uppercase;
+
+      color: #f6f0e9;
     }
   }
-}.block3 {
+  h4 {
+    font-size: 22px;
+    font-weight: bold;
+
+    margin: 0 0 30px 87px;
+  }
+  .people,
+  .myself,
+  .changes,
+  .real {
+    &:before {
+      position: absolute;
+      top: -13px;
+      left: 17px;
+
+      display: block;
+
+      width: 72px;
+      height: 72px;
+
+      content: '';
+    }
+  }
+  .people {
+    &:before {
+      background: url(../img/icon-b3-people.png) no-repeat;
+    }
+  }
+  .myself {
+    &:before {
+      background: url(../img/icon-b3-myself.png) no-repeat;
+    }
+  }
+  .changes {
+    &:before {
+      background: url(../img/icon-b3-changes.png) no-repeat;
+    }
+  }
+  .real {
+    &:before {
+      background: url(../img/icon-b3-real.png) no-repeat;
+    }
+  }
+  ul {
+    margin-bottom: 75px;
+    padding-left: 40px;
+    li {
+      padding-bottom: 27px;
+      &:before {
+        position: absolute;
+        top: 6px;
+        left: -17px;
+
+        display: block;
+
+        width: 7px;
+        height: 7px;
+
+        content: '';
+
+        border-radius: 6px;
+        background: $tx-pink;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.block4 {
+  padding-top: 45px;
+  padding-bottom: 60px;
+
+  text-align: center;
   h2 {
-    span {
-      text-shadow: 200px 0 1px #f00;
+    font-size: 48px;
+    //display: inline-block;
+    font-weight: bold;
+
+    margin: 0 auto 54px auto;
+  }
+  ul {
+    display: flex;
+
+    width: 100%;
+
+    text-align: center;
+    li {
+      display: inline-block;
+
+      width: 18%;
+      margin: 0 auto;
+      img {
+        width: 90%;
+        margin-bottom: 25px;
+      }
+      p {
+        font-weight: bold;
+        line-height: 1.5;
+
+        display: inline-block;
+
+        max-width: 145px;
+        height: 100px;
+        margin-bottom: 15px;
+      }
+      span {
+        display: block;
+
+        margin: 0 auto;
+      }
+      .price {
+        margin-bottom: 5px;
+      }
+      .litle-pink {
+        font-size: 16px;
+
+        color: $tx-pink;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
 
 .block5 {
+  h2 {
+    font-size: 47px;
+    font-weight: bold;
+
+    margin-bottom: 45px;
+    padding: 70px 0 0 0;
+
+    text-align: center;
+    &:after {
+      position: absolute;
+      top: 99px;
+      right: -480px;
+
+      display: block;
+
+      width: 600px;
+      height: 2px;
+
+      content: '';
+
+      background: $tx-pink;
+    }
+  }
   .tabs {
     display: block;
 
@@ -442,14 +626,14 @@ header {
       display: inline-block;
 
       width: 100%;
-      padding: 20px;
+      padding: 40px 25px;
 
       border-radius: 15px;
       background: #fff;
       box-shadow: 0 0 80px 0 rgba(150,150,150, .7);
       &:before {
         position: relative;
-        top: -22px;
+        top: -42px;
 
         display: block;
         clear: both;
@@ -463,14 +647,163 @@ header {
         border-radius: 5px;
         background: $tx-pink;
       }
-      div {
-        padding-top: 10px;
+    }
+  }
+  .tab {
+    width: 100%;
+
+    h4 {
+      font-size: 25px;
+      font-weight: bold;
+
+      margin-bottom: 25px;
+    }
+    h5 {
+      font-size: 22px;
+      font-weight: bold;
+
+      margin-bottom: 25px;
+      padding-top: 5px;
+    }
+    h6 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 17px;
+
+      margin-bottom: 25px;
+    }
+    ol {
+      display: flex;
+
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 55px;
+
+      counter-reset: myCounter;
+      li {
+        display: inline-block;
+
+        width: 11%;
+        margin: 0 auto;
+        padding-bottom: 15px;
+        span {
+          font-size: 15px;
+          font-weight: bold;
+
+          position: relative;
+          z-index: 2;
+
+          display: inline-block;
+
+          margin-right: -30px;
+        }
+        &:before {
+          font-size: 85px;
+          font-weight: bold;
+          line-height: 1.5;
+
+          position: absolute;
+          z-index: 1;
+          top: -51px;
+          left: -2px;
+
+          display: block;
+
+          content: counter(myCounter);
+          counter-increment: myCounter;
+
+          color: #f6ebe8;
+        }
+        &:first-child {
+          margin: 0 auto 0 0;
+        }
+        &:last-child {
+          margin: 0 0 0 auto;
+        }
+      }
+    }
+    .place,
+    .clock,
+    .money,
+    .sale {
+      padding-right: 0;
+      padding-left: 70px;
+      p {
+        font-size: 15px;
+      }
+      a {
+        text-decoration: underline;
+        &:active,
+        &:focus,
+        &:hover {
+          text-decoration: none;
+
+          color: $tx-pink;
+        }
+        &:after {
+          position: relative;
+          top: 4px;
+          right: -4px;
+
+          display: inline-block;
+
+          width: 15px;
+          height: 15px;
+
+          content: '';
+
+          background: url(../img/icon-b5-link.png) no-repeat;
+        }
+      }
+      &:before {
+        position: absolute;
+        top: -4px;
+        left: 1px;
+
+        display: block;
+
+        width: 52px;
+        height: 52px;
+
+        content: '';
+      }
+    }
+    .place {
+      &:before {
+        background: url(../img/icon-b5-place.png) no-repeat;
+      }
+    }
+    .clock {
+      &:before {
+        background: url(../img/icon-b5-clock.png) no-repeat;
+      }
+    }
+    .money {
+      &:before {
+        background: url(../img/icon-b5-money.png) no-repeat;
+      }
+    }
+    .sale {
+      &:before {
+        background: url(../img/icon-b5-sale.png) no-repeat;
       }
     }
   }
 }
 
+.pink-txt {
+  color: $tx-pink;
+}
+.price {
+  font-size: 26px;
+  font-weight: bold;
 
+  margin-bottom: 5px;
+
+  color: #777471;
+}
 
 
 section {
