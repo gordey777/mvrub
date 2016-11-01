@@ -196,6 +196,12 @@ header {
 
           color: $tx-black;
           border-top: 5px solid #fff;
+          &:active,
+          &:focus {
+            text-decoration: none;
+
+            color: $tx-black;
+          }
           &:hover,
           //&:active,
           //&.mPS2id-clicked,
