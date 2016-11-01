@@ -71,3 +71,25 @@ $rb-font-path: '../fonts' !default;
   url('#{$rb-font-path}/roboto-bolditalic.eot') format('embedded-opentype'),
   url('#{$rb-font-path}/roboto-bolditalic.woff') format('woff');
 }
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-style: normal;
+
+  src: url('#{$rb-font-path}/roboto-medium.eot');
+  src: local('Roboto Medium'),
+  local('roboto-medium'),
+  url('#{$rb-font-path}/roboto-medium.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/roboto-medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-style: italic;
+
+  src: url('#{$rb-font-path}/roboto-mediumitalic.eot');
+  src: local('Roboto Medium Italic'),
+  local('roboto-mediumitalic'),
+  url('#{$rb-font-path}/roboto-mediumitalic.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/roboto-mediumitalic.woff') format('woff');
+}

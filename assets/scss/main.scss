@@ -290,40 +290,6 @@ header {
       background: url(../img/icon-b1-rand.png) no-repeat;
     }
   }
-  .pink-button {
-    font-size: 15px;
-
-    display: block;
-    float: left;
-
-    margin-left: 55px;
-    padding: 15px 50px 15px 35px;
-
-    color: #fff;
-    border-radius: 30px;
-    background: #d28a7a;
-    box-shadow: 0 0 40px 0 rgba(50,50,50, .9);
-    &:hover {
-      text-decoration: none;
-
-      box-shadow: 0 0 40px 0 rgba(0,0,0, .9);
-    }
-    &:after {
-      position: relative;
-      top: 0;
-      right: -20px;
-
-      display: block;
-      float: right;
-
-      width: 35px;
-      height: 15px;
-
-      content: '';
-
-      background: url(../img/icon-b1-arrow.png) no-repeat;
-    }
-  }
   .avatar {
     border-radius: 18px;
     box-shadow: 0 0 80px 0 rgba(150,150,150, .7);
@@ -336,7 +302,7 @@ header {
 .block2 {
   h3 {
     font-size: 25px;
-    font-weight: bold;
+    font-weight: 500;
   }
   .b2-left {
     padding: 38px 25px 20px 35px;
@@ -352,7 +318,7 @@ header {
         list-style: none;
         &:before {
           font-size: 25px;
-          font-weight: bold;
+          font-weight: 500;
 
           position: absolute;
           top: 15px;
@@ -385,7 +351,7 @@ header {
 .block3 {
   h2 {
     font-size: 47px;
-    font-weight: bold;
+    font-weight: 500;
 
     position: relative;
     z-index: 1;
@@ -412,7 +378,7 @@ header {
     }
     &:before {
       font-size: 95px;
-      font-weight: bold;
+      font-weight: 500;
 
       position: absolute;
       z-index: 0;
@@ -428,7 +394,7 @@ header {
   }
   h4 {
     font-size: 22px;
-    font-weight: bold;
+    font-weight: 500;
 
     margin: 0 0 30px 87px;
   }
@@ -504,7 +470,7 @@ header {
   h2 {
     font-size: 48px;
     //display: inline-block;
-    font-weight: bold;
+    font-weight: 500;
 
     margin: 0 auto 54px auto;
   }
@@ -524,7 +490,7 @@ header {
         margin-bottom: 25px;
       }
       p {
-        font-weight: bold;
+        font-weight: 500;
         line-height: 1.5;
 
         display: inline-block;
@@ -559,7 +525,7 @@ header {
 .block5 {
   h2 {
     font-size: 47px;
-    font-weight: bold;
+    font-weight: 500;
 
     margin-bottom: 45px;
     padding: 70px 0 0 0;
@@ -651,23 +617,22 @@ header {
   }
   .tab {
     width: 100%;
-
     h4 {
       font-size: 25px;
-      font-weight: bold;
+      font-weight: 500;
 
       margin-bottom: 25px;
     }
     h5 {
       font-size: 22px;
-      font-weight: bold;
+      font-weight: 500;
 
       margin-bottom: 25px;
       padding-top: 5px;
     }
     h6 {
       font-size: 20px;
-      font-weight: bold;
+      font-weight: 500;
     }
     p {
       font-size: 17px;
@@ -690,7 +655,7 @@ header {
         padding-bottom: 15px;
         span {
           font-size: 15px;
-          font-weight: bold;
+          font-weight: 500;
 
           position: relative;
           z-index: 2;
@@ -701,7 +666,7 @@ header {
         }
         &:before {
           font-size: 85px;
-          font-weight: bold;
+          font-weight: 500;
           line-height: 1.5;
 
           position: absolute;
@@ -793,12 +758,123 @@ header {
   }
 }
 
+.block6 {
+  padding-bottom: 70px;
+
+  text-align: center;
+
+  background: url(../img/bg-block6.jpg) no-repeat center top;
+  background-size: cover;
+  .container {
+    padding-top: 80px;
+
+    background: url(../img/icon-b6-top.png) no-repeat center -88px;
+  }
+  h3 {
+    font-size: 54px;
+    font-weight: 500;
+
+    margin-bottom: 30px;
+
+    color: #fff;
+  }
+  p {
+    font-size: 26px;
+
+    margin-bottom: 40px;
+
+    color: #fff;
+    &:after {
+      position: absolute;
+      top: 140px;
+      right: 280px;
+
+      display: block;
+
+      width: 45px;
+      height: 80px;
+
+      content: '';
+
+      background: url(../img/icon-b6-arrowc.png) no-repeat;
+    }
+  }
+  .orange-button {
+    margin: 0 auto;
+  }
+}
+.pink-button {
+  font-size: 15px;
+
+  display: block;
+  float: left;
+
+  margin-left: 55px;
+  padding: 15px 50px 15px 35px;
+
+  color: #fff;
+  border-radius: 30px;
+  background: $tx-pink;
+  box-shadow: 0 0 40px 0 rgba(50,50,50, .9);
+  &:hover {
+    text-decoration: none;
+
+    box-shadow: 0 0 40px 0 rgba(0,0,0, .9);
+  }
+  &:after {
+    position: relative;
+    top: 0;
+    right: -20px;
+
+    display: block;
+    float: right;
+
+    width: 35px;
+    height: 15px;
+
+    content: '';
+
+    background: url(../img/icon-b1-arrow.png) no-repeat;
+  }
+}
+.orange-button {
+  font-size: 15px;
+
+  display: inline-block;
+
+  padding: 15px 50px 15px 35px;
+
+  color: $tx-black;
+  border-radius: 30px;
+  background: #fbde98;
+  &:hover {
+    text-decoration: none;
+
+    color: $tx-black;
+    box-shadow: 0 0 40px 0 rgba(0,0,0, .9);
+  }
+  &:after {
+    position: relative;
+    top: 0;
+    right: -20px;
+
+    display: block;
+    float: right;
+
+    width: 35px;
+    height: 15px;
+
+    content: '';
+
+    background: url(../img/icon-arrowb.png) no-repeat;
+  }
+}
 .pink-txt {
   color: $tx-pink;
 }
 .price {
   font-size: 26px;
-  font-weight: bold;
+  font-weight: 500;
 
   margin-bottom: 5px;
 
@@ -838,8 +914,10 @@ footer {
 
     background-color: #fff;
   }
+  .wrapper {
+    margin-top: 75px;
+  }
   .block1 {
-    margin-top: 70px;
     .avatar {
       float: right;
     }
