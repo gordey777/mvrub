@@ -111,7 +111,7 @@ ymaps.ready(function () {
         }, {
 
             iconLayout: 'default#image',
-            iconImageHref: '../img/icon-map.png',
+            iconImageHref: 'img/icon-map.png',
             iconImageSize: [100, 130],
             iconImageOffset: [-50, -130]
         });
