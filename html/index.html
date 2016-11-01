@@ -25,8 +25,8 @@
 
 <body>
 <!-- wrapper -->
-
-  <header role="banner">
+<div class="wrapper">
+  <header id="header" role="banner">
     <div class="container">
       <div class="row">
 
@@ -38,7 +38,7 @@
 
         <nav id="nav-menu" class="nav__header col-md-5 col-sm-7" role="navigation">
           <ul class="headnav">
-            <li class="active"><a href="#section-1">Обо мне</a></li>
+            <li><a href="#section-1">Обо мне</a></li>
             <li><a href="#section-2">Мои услуги</a></li>
             <li><a href="#section-3">Групповая работа</a></li>
             <li><a href="#section-4">Контакты</a></li>
@@ -58,7 +58,7 @@
       </div><!-- /.row -->
     </div><!-- /.container -->
   </header><!-- /header -->
-<div class="wrapper">
+
   <section id="section-1">
     <div class="block1">
       <div class="container">
@@ -323,47 +323,58 @@
 
       </div><!-- /.container -->
     </div><!-- /.block6 -->
-      <div class="block7">
+    <div class="block7">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <h3>Мои публикации</h3>
             <ul>
               <li>
-                <img src="" alt="">
-                <h5></h5>
-                <p></p>
-                <a href="" class="pink-button"></a>
+                <img src="img/b7-age.png" alt="">
+                <h6>Средний возраст</h6>
+                <p>Понятие «кризис среднего возраста» прочно вошло в обиход, но каждый под ним понимает своё.</p>
+                <a href="" class="pink-button">Читать подробнее</a>
               </li>
               <li>
-                <img src="" alt="">
-                <h6></h6>
-                <p></p>
-                <a href="" class="pink-button"></a>
+                <img src="img/b7-opora.png" alt="">
+                <h6>Нужда в опорах </h6>
+                <p>С точки зрения теории объектных отношений, для того, чтобы человек мог справляться с болезненными переживаниями</p>
+                <a href="" class="pink-button">Читать подробнее</a>
               </li>
               <li>
-                <img src="" alt="">
-                <h5></h5>
-                <p></p>
-                <a href="" class="pink-button"></a>
+                <img src="img/b7-group.png" alt="">
+                <h6>Расстановочная группа</h6>
+                <p>Приглашаю на октябрьскую расстановочную группу 15 октября с 15 до 18 часов. Есть места и для клиентов, и для заместителей.</p>
+                <a href="" class="pink-button">Читать подробнее</a>
               </li>
             </ul>
-            <h4></h4>
-            <h5></h5>
+            <h4>Следите за новостями</h4>
+            <h5 class="pink-txt">Подписывайтесь на меня в Социальных сетях</h5>
           </div>
-          <div class="col-md6">
-            <img src="" alt="" class="vk-img">
+          <div class="col-md-6 socialnet vk-img">
+            <img src="img/b7-vk.png" alt="">
           </div>
-          <div class="col-md6">
-            <img src="" alt="" class="fb-img">
+          <div class="col-md-6 socialnet fb-img">
+            <img src="img/b7-fb.png" alt="">
           </div>
         </div><!-- /.row -->
       </div><!-- /.container -->
     </div><!-- /.block7 -->
   </section><!-- /#section-3 -->
 </div><!-- /wrapper -->
-<footer id="section-4" role="contentinfo">
 
+<footer id="section-4" role="contentinfo">
+  <div class="adress">
+    <div class="sreet">
+      <h5 class="pink-txt">Санкт-Петербург</h5>
+      <p>Невский пр-т, д. 81</p>
+    </div>
+    <div class="tel-number">
+      <p>+7 (921) 916-72-90</p>
+    </div>
+  </div>
+
+  <div id="map"></div>
 </footer><!-- /footer -->
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -404,21 +415,72 @@
   });
   </script>
   <script>
-  (function($){
-  $(window).load(function(){
 
-  $("#nav-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
-  highlightSelector:"#nav-menu a"
-  });
 
-  $("a[rel='next']").click(function(e){
-  e.preventDefault();
-  var to=$(this).parent().parent("section").next().attr("id");
-  $.mPageScroll2id("scrollTo",to);
-  });
+    $headH = $('#header').height() ;
+      //alert($headH );
+$("#section-1").css("margin-top", $headH + "px");
+    (function($){
+      $(window).load(function(){
 
-  });
-  })(jQuery);
+        $("#nav-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+        highlightSelector:"#nav-menu a"
+        });
+
+        $("a[rel='next']").click(function(e){
+        e.preventDefault();
+        var to=$(this).parent().parent("section").next().attr("id");
+        $.mPageScroll2id("scrollTo",to);
+        });
+
+      });
+    })(jQuery);
+
+    (function($){
+      $(window).load(function(){
+
+      $("#nav-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+
+              scrollSpeed:1300,
+              autoScrollSpeed:true,
+              pageEndSmoothScroll:true,
+              offset: $headH,
+              forceSingleHighlight:false,
+              highlightByNextTarget:false,
+              /* disable plugin below [x,y] screen size: boolean, integer, array ([x,y]) */
+              disablePluginBelow:false,
+        });
+      });
+    })(jQuery);
+  </script>
+  <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+  <script>
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [59.931011, 30.359388],
+            zoom: 18
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/icon-map.png',
+            // Размеры метки.
+            iconImageSize: [100, 130],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-50, -130]
+        });
+
+    myMap.geoObjects.add(myPlacemark);
+});
   </script>
 
 </body>
